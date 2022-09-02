@@ -1,0 +1,40 @@
+@use "./colors" as *;
+@mixin adjust {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+@mixin center {
+  max-lines: -50%;
+  transform: translateX(-50%);
+}
+
+// breakpoints
+
+@mixin tablet {
+  @media (max-width:1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width:500px) {
+    @content;
+  }
+}
+@mixin min-mobile {
+  @media (max-width:400px) {
+    @content;
+  }
+}
+@mixin  line {
+  width: 115px;
+  height: 6px;
+  background-color:#AEC5CE;
+}
+@mixin headline {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+}

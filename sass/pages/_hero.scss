@@ -1,0 +1,91 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+.hero-list {
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+ .hero-box {
+  min-height: 1500px;
+  background-color: red;
+ }
+  &__item {
+    &-texts {
+      h1 {
+        position: absolute;
+        font-size: 5rem;
+        color: #fff;
+        z-index: 2;
+        left: 35%;
+        right: 10%;
+        top: 25%;
+      }
+      p {
+        position: absolute;
+        font-size: 1.7rem;
+        color: #fff;
+        z-index: 2;
+        left: 35%;
+        right: 10%;
+        top: 55%;
+      }
+      .black-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+      }
+      button {
+        right: 10%;
+        bottom: 18%;
+        z-index: 2;
+        position: absolute;
+        padding: 20px 40px;
+        border-radius: 10px;
+        color: $primary-color;
+        background-color: #AEC5CE;
+        transition: .3s;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+    @include tablet {
+      h1 {
+        left: 5%;
+        font-size: 3rem;
+      }
+      p {
+        left:5%;
+        top: 65%;
+        font-size: 1rem;
+      }
+      button {
+        right: 5%;
+        bottom:5%
+      }
+    }
+    @include mobile {
+      h1 {
+        left: 5%;
+        font-size: 1.5rem;
+      }
+      p {
+        left:5%;
+        top: 61%;
+        font-size: .8rem;
+      }
+      button {
+        right: 2%;
+        bottom:5%;
+        padding:8px 10px;
+        font-size: .7rem;
+        
+        font-weight: 700;
+      }
+    }
+  }
+}

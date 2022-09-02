@@ -1,0 +1,54 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+.general-texts {
+  @include headline;
+  .line {
+    @include line;
+  }
+}
+.surgery {
+  padding: 60px 0;
+  background-color:$bg-color;
+  .general-texts {
+    .line {
+      background-color: $primary-color;
+    }
+  }
+  &__list {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    &-item {
+      img {
+        border-radius: 25px
+      }
+      position: relative;
+      div {
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+        right: 20px;
+        width:calc(100% - 40px);
+        background-color: $primary-color;
+        h4 {
+          text-align: center;
+          color: $bg-color;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+  @include tablet {
+    &__list {
+      column-gap: 10px;
+    }
+  }
+  @include mobile {
+    &__list {
+      column-gap: 10px;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+}
