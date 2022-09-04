@@ -3,8 +3,62 @@
 
 .about {
   background-color: #F4F4F8;
+  &__img.new {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+    @include tablet {
+      min-height:0%;
+    }
+    @include mobile {
+      min-height:5%;
+      img {
+        min-height: 100px;
+      }
+    }
+    img {
+      height: 100%;
+    }
+    .general-texts {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      padding-top: 7%;
+      background-color: rgba(#fff, .9);
+    }
+    @include tablet {
+      .general-texts {
+        padding-top: 9%;
+      }
+    }
+    @include mobile {
+      .general-texts {
+        padding-top: 5%;
+        h2 {
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: .7rem;
+        }
+        .line {
+          margin-top: -5px;
+          width: 30px;
+          height: 2px;
+        }
+      }
+      padding-bottom: 28px;
+    }
+  }
   &__img {
     padding-top: 90px;
+    img {
+      display: block;
+    }
+    @include mobile {
+      padding-top: 50px;
+    }
   }
   @include mobile {
     &>.container {
@@ -12,10 +66,20 @@
     }
   }
 }
+.about-page.new {
+  transform: translateY(0px);
+}
 .about-page {
   background-color: #fff;
   padding: 40px 60px 80px;
   transform: translateY(-150px);
+  &__left.new-menu {
+    width: 30%;
+    @include tablet {
+      width: 100%;
+      overflow-y: auto;
+    }
+  }
   &__left {
     width: 100%;
     display: flex;
@@ -53,6 +117,27 @@
     }
   }
   &__right {
+    &-links {
+      display: flex;
+      border-bottom: 1px solid #AEC5CE;
+      column-gap: 2px;
+      margin-bottom: 15px;
+      .founders-link {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #AEC5CE;
+        font-weight: 700;
+        @include min-mobile {
+          padding: 7px 12px;
+          font-size: .8rem;
+        }
+      }
+      .founders-link.active {
+        color: #AEC5CE;
+        background-color: $primary-color;
+      }
+    }
     &-dsc {
       font-weight: 300;
       font-size: 2rem;
@@ -98,6 +183,11 @@
         }
       }
     }
+    &__right {
+      &-dsc {
+        font-size: 1.4rem;
+      }
+    }
   }
   @include mobile {
     transform: translateY(-35px);
@@ -114,7 +204,7 @@
     }
     &__right {
       &-dsc {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 28px;
       }
     }
@@ -139,6 +229,11 @@
     row-gap: 30px;
   }
 }
+.container-min.new {
+  @include tablet {
+    flex-direction: column-reverse;
+  }
+}
 
 .certificates {
   padding: 60px 0 25px;
@@ -158,4 +253,7 @@
       align-items: center;
     }
   }
+}
+.doctor-img {
+  margin-bottom: 28px;
 }

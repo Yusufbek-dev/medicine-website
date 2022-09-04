@@ -63,6 +63,9 @@ header {
       transition: all .3s ease-in-out;
       background-color: #000; 
     }
+    .bar.white {
+      background-color: #fff;
+    }
   }
   @include tablet {
     &__logo {

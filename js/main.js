@@ -11,12 +11,18 @@ document.querySelectorAll(".head__nav-item").forEach(n => n.addEventListener("cl
     nav.classList.remove("active");
   }));
 
+
   const activePage = window.location.pathname;
   const links = document.querySelectorAll(".about-page__left-link").forEach(link => {
     if(link.href.includes(`${activePage}`)) {
       link.classList.add('active');
     }
   } ) 
+  const founderLink = document.querySelectorAll(".founders-link").forEach(link => {
+    if(link.href.includes(`${activePage}`)) {
+      link.classList.add('active');
+    }
+  } );
   
   // link.addEventListener("click", ()=> {
   //   link.classList.toggle("active");
