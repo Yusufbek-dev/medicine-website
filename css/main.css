@@ -961,7 +961,8 @@ footer .top {
     top: 65%;
     font-size: 1rem;
   }
-  .hero-list__item button {
+  .hero-list__item a {
+    padding: 15px 30px;
     right: 5%;
     bottom: 5%;
   }
@@ -976,7 +977,7 @@ footer .top {
     top: 61%;
     font-size: 0.8rem;
   }
-  .hero-list__item button {
+  .hero-list__item a {
     right: 2%;
     bottom: 5%;
     padding: 8px 10px;
