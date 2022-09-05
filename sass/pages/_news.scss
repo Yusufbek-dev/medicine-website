@@ -99,6 +99,7 @@ li.news__list-item.new {
     font-size: 1.2rem;
   }
 }
+
 .news-dsc {
   padding: 20px 20px 40px;
   background-color: #fff;
@@ -112,5 +113,11 @@ li.news__list-item.new {
     background-color: #AEC5CE;
     display: block;
     margin-top: 12px;
+  }
+}
+.news-dsc.surg-typ{
+  font-size: 1.1rem;
+  @include mobile {
+    font-size: .8rem;
   }
 }

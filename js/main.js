@@ -23,7 +23,11 @@ document.querySelectorAll(".head__nav-item").forEach(n => n.addEventListener("cl
       link.classList.add('active');
     }
   } );
-  
-  // link.addEventListener("click", ()=> {
-  //   link.classList.toggle("active");
-  // })
+
+  const faqs = document.querySelectorAll(".faq");
+
+  faqs.forEach(faq => {
+    faq.addEventListener("click", ()=> {
+      faq.classList.toggle("active");
+    });
+  });

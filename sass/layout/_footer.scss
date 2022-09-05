@@ -6,8 +6,15 @@ footer {
   position: relative;
   .top {
     position: absolute;
-    bottom:5px;
-    right: 5px;
+    bottom:7px;
+    right: 7px;
+    @include mobile {
+      right: 4px;
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
   }
 }
 .footer-top {
@@ -99,6 +106,7 @@ footer {
     justify-content:space-between;
     a {
       width: 40%;
+      font-size: .8rem;
     }
   }
 }

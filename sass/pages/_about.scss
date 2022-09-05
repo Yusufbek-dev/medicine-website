@@ -128,6 +128,11 @@
         color: #fff;
         background-color: #AEC5CE;
         font-weight: 700;
+        transition: .5s ease-out;
+        &:hover {
+          color: #AEC5CE;
+          background-color: $primary-color;
+        }
         @include min-mobile {
           padding: 7px 12px;
           font-size: .8rem;
@@ -214,12 +219,17 @@
   a {
     color: $primary-color;
     text-transform: uppercase;
+    &:nth-child(1) {
+      transition: .3s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
     &:nth-child(2) {
       text-decoration: underline;
     }
   }
 }
-
 .container-min {
   margin-top: 50px;
   display: flex;
@@ -257,3 +267,18 @@
 .doctor-img {
   margin-bottom: 28px;
 }
+
+// surgery section style 
+
+.surgery-img {
+  margin-top: 31px;
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+// .surg-typ {
+  
+// }

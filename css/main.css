@@ -196,6 +196,9 @@ header {
   transition: 0.3s;
   border-bottom: 2px solid transparent;
 }
+.head__nav-item a {
+  text-transform: capitalize;
+}
 .head__nav-item:last-child {
   display: flex;
   align-items: center;
@@ -460,9 +463,11 @@ header {
   border-radius: 10px;
   width: 100%;
   border: 1px solid transparent;
+  transition: 0.3s ease;
 }
 .connection__list-right form div input:hover, .connection__list-right form div input:focus {
   background-color: #f3f3f3;
+  box-shadow: 5px 5px 5px rgb(219, 218, 218);
 }
 .connection__list-right form div input::-moz-placeholder {
   color: #a1a1a4;
@@ -481,10 +486,12 @@ header {
   border: none;
   border-radius: 15px;
   background-color: #F4F4F8;
+  transition: 0.3s ease;
 }
 .connection__list-right form textarea:hover, .connection__list-right form textarea:focus {
   background-color: #f3f3f3;
   outline: none;
+  box-shadow: 5px 5px 5px rgb(219, 218, 218);
 }
 .connection__list-right form textarea ::-moz-placeholder {
   color: #a1a1a4;
@@ -769,8 +776,17 @@ footer {
 }
 footer .top {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 7px;
+  right: 7px;
+}
+@media (max-width: 500px) {
+  footer .top {
+    right: 4px;
+  }
+  footer .top img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .footer-top {
@@ -870,6 +886,7 @@ footer .top {
   }
   .footer-middle a {
     width: 40%;
+    font-size: 0.8rem;
   }
 }
 
@@ -917,7 +934,7 @@ footer .top {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.hero-list__item-texts button {
+.hero-list__item-texts a {
   right: 10%;
   bottom: 18%;
   z-index: 2;
@@ -930,7 +947,7 @@ footer .top {
   text-transform: uppercase;
   text-align: center;
 }
-.hero-list__item-texts button:hover {
+.hero-list__item-texts a:hover {
   background-color: #7F2941;
   color: #fff;
 }
@@ -1029,6 +1046,34 @@ li.news__list-item.uk-active {
          column-gap: 10px;
     flex-direction: column;
     row-gap: 20px;
+  }
+}
+
+.surgery-img {
+  position: relative;
+}
+.surgery-img h4 {
+  position: absolute;
+  top: 15%;
+  left: 15px;
+}
+
+.surgery-banner {
+  padding: 17px 10px;
+  background-color: #AEC5CE;
+  transform: translateY(-102%);
+}
+.surgery-banner h4 {
+  font-weight: 600;
+  color: #7F2941;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .surgery-banner {
+    padding: 8px 6px;
+  }
+  .surgery-banner h4 {
+    font-size: 0.8rem;
   }
 }
 
@@ -1155,6 +1200,15 @@ li.news__list-item.new {
   background-color: #AEC5CE;
   display: block;
   margin-top: 12px;
+}
+
+.news-dsc.surg-typ {
+  font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+  .news-dsc.surg-typ {
+    font-size: 0.8rem;
+  }
 }
 
 .about {
@@ -1298,6 +1352,11 @@ li.news__list-item.new {
   color: #fff;
   background-color: #AEC5CE;
   font-weight: 700;
+  transition: 0.5s ease-out;
+}
+.about-page__right-links .founders-link:hover {
+  color: #AEC5CE;
+  background-color: #7F2941;
 }
 @media (max-width: 400px) {
   .about-page__right-links .founders-link {
@@ -1382,6 +1441,12 @@ li.news__list-item.new {
   color: #7F2941;
   text-transform: uppercase;
 }
+.general-sup a:nth-child(1) {
+  transition: 0.3s ease;
+}
+.general-sup a:nth-child(1):hover {
+  text-decoration: underline;
+}
 .general-sup a:nth-child(2) {
   text-decoration: underline;
 }
@@ -1427,4 +1492,239 @@ li.news__list-item.new {
 
 .doctor-img {
   margin-bottom: 28px;
+}
+
+.surgery-img {
+  margin-top: 31px;
+}
+
+.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.faqs-box {
+  margin: 50px 0 60px;
+}
+
+.general-texts.faq {
+  padding-top: 90px;
+}
+@media (max-width: 500px) {
+  .general-texts.faq {
+    padding-top: 50px;
+  }
+}
+
+.faq {
+  font-family: "roboto", sans-serif;
+  max-width: 100%;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+
+.question {
+  background-color: #F4F4F8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.question h4 {
+  color: #7F2941;
+}
+
+.answer p {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.answer {
+  max-height: 0;
+  transition: 1.1s ease;
+  overflow: hidden;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  -webkit-animation: fade 1s ease-in-out;
+          animation: fade 1s ease-in-out;
+}
+
+.question > p {
+  font-size: 1.2rem;
+  margin-left: 10px;
+  color: #7F2941;
+  transform: rotate(90deg);
+  transition: 0.6s;
+}
+
+.faq.active .question p {
+  transform: rotate(270deg);
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.general-texts h4 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #7F2941;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.form {
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.form > h4 {
+  color: #7F2941;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.form__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.form__list-item {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.form__list-item select {
+  width: 80%;
+  padding: 15px;
+  background-color: #F4F4F8;
+  outline: none;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+.form__list-item select:hover {
+  background-color: #d5d5dc;
+  box-shadow: 5px 5px 5px #e6e6e8;
+  border: 1px solid #AEC5CE;
+}
+.form__list-item label {
+  color: #7F2941;
+}
+.form__list-item input {
+  width: 80%;
+  padding: 15px;
+  background-color: #F4F4F8;
+  outline: none;
+  transition: 0.4s;
+  border: 1px solid transparent;
+}
+.form__list-item input:hover {
+  background-color: #d5d5dc;
+  box-shadow: 5px 5px 5px #e6e6e8;
+  border: 1px solid #AEC5CE;
+}
+.form__list-item div {
+  width: 80%;
+}
+.form__list-item div p {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.form__list-item div input {
+  padding: 15px;
+  background-color: #F4F4F8;
+  outline: none;
+  transition: 0.4s;
+  border: 1px solid transparent;
+  width: 100%;
+}
+.form__list-item div input:hover {
+  background-color: #F4F4F8;
+}
+.form__list input[type=submit] {
+  margin-bottom: 0px;
+  padding: 10px;
+  background-color: #7F2941;
+  color: #AEC5CE;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 1px solid #7F2941;
+  transition: 0.4s;
+}
+.form__list input[type=submit]:hover {
+  background-color: #AEC5CE;
+  color: #7F2941;
+}
+@media (max-width: 1024px) {
+  .form {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 770px) {
+  .form {
+    padding: 0 0%;
+  }
+  .form__list-item select {
+    width: 70%;
+  }
+  .form__list-item input {
+    width: 70%;
+  }
+  .form__list-item div {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .form__list-item label {
+    font-size: 0.8rem;
+  }
+  .form__list-item select {
+    padding: 10px;
+    width: 65%;
+    font-size: 0.8rem;
+  }
+  .form__list-item input {
+    width: 65%;
+    padding: 10px;
+  }
+  .form__list-item input::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .form__list-item input:-ms-input-placeholder {
+    font-size: 0.8rem;
+  }
+  .form__list-item input::placeholder {
+    font-size: 0.8rem;
+  }
+  .form__list-item div {
+    width: 65%;
+  }
+  .form__list-item div p {
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=main.css.map */

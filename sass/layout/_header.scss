@@ -26,6 +26,9 @@ header {
     @include adjust;
     column-gap: 25px;
     &-item {
+      a {
+        text-transform:capitalize;
+      }
       &:last-child {
         display: flex;
         align-items: center;

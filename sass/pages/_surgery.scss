@@ -52,3 +52,28 @@
     }
   }
 }
+
+.surgery-img {
+  position: relative;
+  h4 {
+    position: absolute;
+    top: 15%;
+    left: 15px;
+  }
+}
+.surgery-banner {
+  padding: 17px 10px;
+  background-color:#AEC5CE;
+  transform: translateY(-102%);
+  h4 {
+    font-weight: 600;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+  @include mobile {
+    padding: 8px 6px;
+    h4 {
+      font-size: .8rem;
+    }
+  }
+}
